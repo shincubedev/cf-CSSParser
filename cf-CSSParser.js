@@ -8,7 +8,7 @@
  * 
  * 
  * @summary Javascript CSS parser
- * @author Shincube <contact@shincube.com>
+ * @author Shincube <support@shincube.com>
  *
  * Created at     : 2023-04-28 22:13:22 
  * Last modified  : 2023-04-28 22:13:40
