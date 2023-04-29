@@ -8,7 +8,7 @@ i) normal {} and media query,
 ii) non-repeat rules (no checks is done that the same rule has existed),
 iii) correct syntax (ends with ;)
 
-### To 
+### How to use
 To parse:
 ```
 var css_str = '.class{attribute:value;}';
