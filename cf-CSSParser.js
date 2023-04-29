@@ -200,3 +200,26 @@ function _parseCSS(css_str){ //break down a css_str into a dictionary
 
     return css_dic;
 }
+
+function _cssDicToString(css_dic){ // reconstruct a string from the dictionary
+
+    var css_new_str = "";
+    var keys = Object.keys(css_dic);
+    
+    keys.forEach(function(k){
+
+        var this_str = "";
+        if (Array.isArray(css_dic[k])){
+            css_dic[k].forEach(function(r){
+                this_str += r;
+            });
+        }
+        else{
+            this_str = _cssDicToString(css_dic[k]);
+        }
+
+        css_new_str+=k+'{'+this_str+'}';
+    });
+
+    return css_new_str;
+}
