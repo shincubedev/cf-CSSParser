@@ -17,5 +17,5 @@ var dictionary = _parseCSS(css_str);
 
 To reconstruct string:
 ```
-var css_str_construct = __cssDicToString(dictionary);
+var css_str_construct = _cssDicToString(dictionary);
 ```
