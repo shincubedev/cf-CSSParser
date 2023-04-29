@@ -11,7 +11,7 @@
  * @author Shincube <support@shincube.com>
  *
  * Created at     : 2023-04-28 22:13:22 
- * Last modified  : 2023-04-28 22:13:40
+ * Last modified  : 2023-04-29 23:08:42
  */
 
 function _tokenizeCSS(css_str){
@@ -155,6 +155,7 @@ function _stringOccurenceCount(str, to_find){
 function _CSSToDic(css_str){ // this can be a long css string
     if (typeof css_str == 'string'){
         var tokens = _tokenizeCSS(css_str); //break each long string into individual {} group
+
         // convert each individual line to a dictionary entry
         var css_dic = {};
         for (var i = 0; i < tokens.length; i++){
@@ -163,7 +164,7 @@ function _CSSToDic(css_str){ // this can be a long css string
             // check if this is already end or embedded string
             css_dic[dic_entry[0]] = dic_entry[1];
 
-            if (_stringOccurenceCount(dic_entry[1], '{') <= 1){
+            if (_stringOccurenceCount(dic_entry[1], '{') == 0){
                 css_dic[dic_entry[0]] =_CSSRulesToArray(dic_entry[1]);
             }
         }
